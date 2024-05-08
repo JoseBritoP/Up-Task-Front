@@ -9,6 +9,7 @@ import ProfileLayout from "./layouts/ProfileLayout";
 import NotFound from "./views/NotFound";
 import { Navigate } from "react-router-dom";
 export default function Router(){
+  console.log(import.meta.env.VITE_API_URL)
   return (
     <BrowserRouter>
       <Routes>
