@@ -7,13 +7,14 @@ import { CreateProjectView, EditProjectView, ProjectDetailView, ProjectTeamView 
 import { ChangePasswordView, ProfileView } from "./views/profile";
 import ProfileLayout from "./layouts/ProfileLayout";
 import NotFound from "./views/NotFound";
-
+import { Navigate } from "react-router-dom";
 export default function Router(){
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<AppLayout/>}>
-          <Route path="/" element={<DashboardView/>} index/>
+          <Route path="/" element={<Navigate to={'/projects'}/>}/>
+          <Route path="/projects" element={<DashboardView/>} index/>
           <Route path="/projects/create" element={<CreateProjectView/>}/>
           <Route path="/projects/:projectId" element={<ProjectDetailView/>}/>
           <Route path="/projects/:projectId/edit" element={<EditProjectView/>}/>
