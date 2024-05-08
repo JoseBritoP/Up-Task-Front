@@ -45,6 +45,7 @@ const note = z.object({
 export type Note = z.infer<typeof note>
 
 export const taskPrincipalSchema = z.object({
+  _id:z.string(),
   name,
   description,
   project:z.string(),
